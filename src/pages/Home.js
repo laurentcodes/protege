@@ -6,9 +6,11 @@ import { db } from '../firebase/firebase'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Layout from '../layouts/Layout'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 const Home = () => {
   const [jobs, setJobs] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     ;(async function retrieveJobs() {
@@ -33,6 +35,7 @@ const Home = () => {
         }
       })
       setJobs(jobList)
+      setLoading(false)
     })()
   }, [])
 
@@ -66,7 +69,7 @@ const Home = () => {
             <FindYourNext />
 
             <div className='flex md:w-3/4 flex-col text-center mx-auto mt-4'>
-              <p className='md:tracking-wide lg:w-3/4 xl:w-1/2 mx-auto md:text-lg text-blue-400 mb-6'>
+              <p className='md:tracking-wide lg:w-3/4 xl:w-1/2 mx-auto md:text-lg text-blue-700 mb-6'>
                 <span className='md:text-2xl font-medium'>
                   Remote jobs for junior developers.
                 </span>
@@ -95,9 +98,11 @@ const Home = () => {
               staggerChildren: 0.2,
             }}
           >
-            <h2 className='text-center text-2xl text-blue-500 font-semibold mb-8'>
+            <h2 className='text-center text-2xl text-blue-900 font-semibold mb-8'>
               Latest Opportunities
             </h2>
+
+            <LoadingSpinner loading={loading}/>
 
             <div data-cy='job-card-container' className='container'>
               {jobs.slice(0, 6).map((job, index) => (

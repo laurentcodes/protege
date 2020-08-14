@@ -51,13 +51,13 @@ const GetInTouch = () => {
           ease: 'easeIn',
         }}
       >
-        <h1 className='text-2xl font-semibold text-blue-500 mb-3'>
+        <h1 className='text-2xl font-semibold text-blue-900 mb-3'>
           We'd love to hear from you!
         </h1>
 
-        <p className='text-blue-200 mb-12'>
-          Feeback? Complaints? Feature requests? Questions? We want to hear them
-          all!
+        <p className='text-blue-600 mb-12'>
+          Feedback? Complaints? Feature requests? Questions? We want to hear
+          them all!
           <br />
           <br />
           Our goal is to make Protege.dev the best place for junior developers
@@ -81,7 +81,7 @@ const GetInTouch = () => {
         >
           <h2
             style={{ backgroundImage: `url(${backgroundImage})` }}
-            className='bg-cover text-blue-500 font-bold p-4 bg-blue-100 text-xl'
+            className='bg-cover text-blue-900 font-bold p-4 bg-blue-100 text-xl'
           >
             Get in Touch
           </h2>
@@ -97,7 +97,7 @@ const GetInTouch = () => {
                 <div className='flex flex-col md:w-1/2 md:mr-6 mb-3 md:mb-0'>
                   <label
                     htmlFor='name'
-                    className='text-blue-500 font-semibold mb-2'
+                    className='text-blue-900 font-semibold mb-2'
                   >
                     Name
                   </label>
@@ -105,7 +105,7 @@ const GetInTouch = () => {
                   <input
                     id='name'
                     name='name'
-                    className='input outline-none focus:shadow-outline'
+                    className='input'
                     title='Users name'
                     type='text'
                     required
@@ -116,7 +116,7 @@ const GetInTouch = () => {
                 <div className='flex flex-col md:w-1/2'>
                   <label
                     htmlFor='email'
-                    className='text-blue-500 font-semibold mb-2'
+                    className='text-blue-900 font-semibold mb-2'
                   >
                     Email
                   </label>
@@ -124,7 +124,7 @@ const GetInTouch = () => {
                   <input
                     id='email'
                     name='email'
-                    className='input outline-none focus:shadow-outline'
+                    className='input'
                     title='Users email'
                     type='email'
                     required
@@ -136,7 +136,7 @@ const GetInTouch = () => {
               <div className='flex flex-col'>
                 <label
                   htmlFor='comment'
-                  className='text-blue-500 font-semibold mb-2'
+                  className='text-blue-900 font-semibold mb-2'
                 >
                   Comment
                 </label>
@@ -144,7 +144,7 @@ const GetInTouch = () => {
                 <textarea
                   id='comment'
                   name='comment'
-                  className='input outline-none focus:shadow-outline'
+                  className='input'
                   title='Users comment'
                   type='text'
                   as='textarea'
